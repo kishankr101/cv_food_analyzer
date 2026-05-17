@@ -9,11 +9,15 @@ from PIL import Image
 
 DEFAULT_MODEL = "gemini-3.1-flash-lite"
 
+from google import genai
+
 
 def get_client(api_key: str | None = None):
     key = api_key or os.getenv("GEMINI_API_KEY")
+
     if not key:
         raise ValueError("GEMINI_API_KEY is missing.")
+
     return genai.Client(api_key=key)
 
 
