@@ -4,3 +4,4 @@ python-dotenv
 opencv-python
 numpy
 pillow
+google-genai
